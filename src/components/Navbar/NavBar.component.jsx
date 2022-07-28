@@ -1,10 +1,11 @@
 import './NavBar.styles.css'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import addPost from './add.png'
 import AddnewPost from '../subpages/Home/Addpost.component';
 
 const NavBar = () => {
 
+  const navigate = useNavigate()
   return(
   <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div className="container-fluid">
@@ -39,11 +40,11 @@ const NavBar = () => {
           </li>
         </ul>
         <form className="d-flex" role="search">
-          <button className='addpostbtn'>
+          <button className='addpostbtn' onClick={ (e) => navigate('/addPost')} >
             <span className='addpostspan'>Add <br /> Post</span>
-            <Link to='/addPost' className='nav-link'>
+            <div className='nav-link' >
               <img src={addPost} alt="" style={{width:"40px",padding:"3px",marginRight:"8px"}}/>
-            </Link>
+            </div>
           </button>
           <input
             className="form-control me-2"

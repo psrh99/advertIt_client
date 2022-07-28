@@ -3,8 +3,9 @@ import NavBar from '../../Navbar/NavBar.component';
 import './addpost.styles.css'
 import PostServices from '../../../Services/PostServices';
 import { useNavigate } from 'react-router-dom';
-const AddnewPost =() =>{
 
+
+const AddnewPost =() =>{
     const navigate = useNavigate()
     const [post, setPost] = useState({
         id:"",
