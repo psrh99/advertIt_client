@@ -1,0 +1,11 @@
+.main{
+    padding-top: 20px;
+    display: flex;
+    width: 90vw;
+    /* height: 100vh; */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap:40px;
+    margin: auto;
+    color: black;
+}

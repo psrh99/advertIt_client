@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    width: 100%;
+}
+
+.label{
+    color: black;
+}
+
+.input-box{
+    width: 90vh;
+    height: 8vh;
+    border-radius: 10px;
+    padding: 5px;
+    padding-left: 10px;
+    margin-left: 1px;
+    margin-bottom: 10px;
+    border: 0px;
+    background-color: rgb(212, 212, 212);
+}
+textarea{
+    padding: 5px;
+    background-color: rgb(212, 212, 212);
+    width: 90vh;
+    border-color: white;
+    
+}
+.sub-btn-addps{
+    margin-left: 43%;
+    width: 110px;
+}

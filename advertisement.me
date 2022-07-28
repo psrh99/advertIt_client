@@ -1,0 +1,67 @@
+Advertisement Portal
+Scope
+A web application which is to be used by sellers to post advertisements related to items e.g., rental accommodation, vehicle, electronic devices etc.  Similarly, it is also used by buyers who are looking to buy such items.
+Functional Requirements
+a)Login
+Application should allow users to create an account with basic information i.e., Name, Address, Contact Number and email address.
+Application should allow user to login using Google, Facebook and Apple account.
+User should be able to get new password using “Forgot Password” feature.
+
+b)Item Advertisement Search
+Buyer can search items by Item Category, Item Name or keyword along with location.
+If item not found, buyer should be able to add it into Wishlist items and get notified via email once available.
+[Stretch Goal] Application should recommend buyers items based on their previous searches or if location closely matches with seller.
+
+c)Item Detail Screen
+Buyer should be able to see details of item e.g., Item description, image, price,
+Buyer should be given chat option to connect with Seller
+Buyer should be shown the seller contact details.
+
+d)Item Advertisement Post Screen
+Seller should be able to post an advertisement by selecting an item category.
+Seller should be able to able to provide below description
+Item Title
+Item Description
+Item Price
+Image(s)
+Location (Country/City)
+Seller should be able to Add/Update/Delete their advertisement.
+e)Order History Screen
+Buyer should be able to view their orders history with information like Item Name, Purchased Date etc.
+Pagination to be provided if orders exceed 10.
+f)Item Advertisement History Screen
+Seller should be able to view their advertisement history with information like Item Name, Description, Price, Post Date, status etc.
+Pagination to be provided if orders exceed 10.
+
+g)Email Notifications
+a.Send email for below events.
+i.Notify buyer/seller once account is created
+ii.Notify buyer when any Wishlist item advertisement get posted by seller on portal.
+iii.Notify seller when advertisement got approached by any buyer.
+Technical Architecture
+a)Create below Microservices corresponding to their functionalities 
+Item Service 
+Order Service
+Email Service
+Login Service
+
+b)Create an API Gateway using Spring Cloud Gateway.
+
+c)Create load balancing using Spring Cloud Load Balancer.
+
+d)Create service discovery mechanism using Spring Cloud naming service mechanism.
+
+e)Create messaging system using Apache Kafka for below Use cases.
+Seller post is put to Kafka for a topic which is to be consumed by buyers.
+Once order is placed, the event is posted into Kafka queue and saved into item advertisement database
+
+f)Create UI pages of Login Screen, Item Search, Cart, Item Advertisement Post screen and Order History Screen using ReactJS.
+
+g)Make use of Docker for microservices deployment
+
+
+
+
+High Level Architecture
+
+
