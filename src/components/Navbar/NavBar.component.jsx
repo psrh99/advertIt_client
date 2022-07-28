@@ -3,7 +3,7 @@ import {Link, useNavigate} from 'react-router-dom'
 import addPost from './add.png'
 import AddnewPost from '../subpages/Home/Addpost.component';
 
-const NavBar = () => {
+const NavBar = ({handleChange}) => {
 
   const navigate = useNavigate()
   return(
@@ -51,11 +51,8 @@ const NavBar = () => {
             type="search"
             placeholder="Search"
             aria-label="Search"
-            // onChange={handleChange}
+            onChange={handleChange}
           />
-          <button className="btn btn-outline-success" type="submit">
-            Search
-          </button>
         </form>
       </div>
     </div>
